@@ -8,6 +8,18 @@ from polyglot.builtins import codepoint_to_chr, hasenv, native_string_type
 from math import floor
 from functools import partial
 
+print("hello !!!!")
+import sys
+print("Python 版本：", sys.version)
+print("Python 安装路径：", sys.executable)
+
+import pydevd_pycharm
+pydevd_pycharm.settrace('127.0.0.1', port=12345, stdoutToServer=True, stderrToServer=True)
+
+# from calibre.rpdb import set_trace
+# set_trace()
+
+
 if not hasenv('CALIBRE_SHOW_DEPRECATION_WARNINGS'):
     warnings.simplefilter('ignore', DeprecationWarning)
 try:
