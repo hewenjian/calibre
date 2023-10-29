@@ -431,6 +431,10 @@ class IframeBoss:
         if self.reference_mode_enabled:
             start_reference_mode()
         self.last_window_width, self.last_window_height = scroll_viewport.width(), scroll_viewport.height()
+        window.setTimeout(self.content_loaded_stage_tmp, 1000)
+
+    def content_loaded_stage_tmp(self):
+        v"debugger"
         if self.highlights_to_apply:
             self.apply_highlights_on_load(self.highlights_to_apply)
             self.highlights_to_apply = None

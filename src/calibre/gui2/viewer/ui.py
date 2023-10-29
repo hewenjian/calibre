@@ -505,7 +505,7 @@ class EbookViewer(MainWindow):
         if open_at:
             self.pending_open_at = open_at
         self.setWindowTitle(_('Loading book') + f'… — {self.base_window_title}')
-        self.loading_overlay(_('Loading book, please wait'))
+        #self.loading_overlay(_('Loading book, please wait'))
         self.save_annotations()
         self.save_reading_rates()
         self.current_book_data = {}
@@ -768,7 +768,7 @@ class EbookViewer(MainWindow):
             QApplication.instance().ensure_window_on_screen(self)
         if state:
             self.restoreState(state, self.MAIN_WINDOW_STATE_VERSION)
-            self.inspector_dock.setVisible(False)
+            self.inspector_dock.setVisible(True)
             if not get_session_pref('restore_docks', True):
                 for dock_def in self.dock_defs.values():
                     d = getattr(self, '{}_dock'.format(dock_def.name.partition('-')[0]))
