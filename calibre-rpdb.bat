@@ -7,19 +7,3 @@ calibre-debug -c "from calibre.rpdb import cli; cli()"
 
 ::pause
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-:: import pydevd_pycharm
-:: pydevd_pycharm.settrace('127.0.0.1', port=12345, stdoutToServer=True, stderrToServer=True)

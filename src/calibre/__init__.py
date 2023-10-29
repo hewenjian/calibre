@@ -13,8 +13,8 @@ import sys
 print("Python 版本：", sys.version)
 print("Python 安装路径：", sys.executable)
 
-import pydevd_pycharm
-pydevd_pycharm.settrace('127.0.0.1', port=12345, stdoutToServer=True, stderrToServer=True)
+# import pydevd_pycharm
+# pydevd_pycharm.settrace('127.0.0.1', port=12345, stdoutToServer=True, stderrToServer=True)
 
 # from calibre.rpdb import set_trace
 # set_trace()
